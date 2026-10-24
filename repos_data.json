@@ -1,0 +1,548 @@
+[
+  {
+    "repo": "AetherProject",
+    "title": "Aether-Link (AetherProject)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/AetherProject"
+  },
+  {
+    "repo": "AgentOS",
+    "title": "AgentOS: Autonomous Multi-Agent Research Organization & Operating System",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/AgentOS"
+  },
+  {
+    "repo": "ArrayApp",
+    "title": "\ud83d\udca1 ArrayApp (IdeaApp) \u2014 Developer & Platform Reference",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/ArrayApp"
+  },
+  {
+    "repo": "Content-Based-Image-Retrieval-MVP",
+    "title": "Content-Based-Image-Retrieval-MVP",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/Content-Based-Image-Retrieval-MVP"
+  },
+  {
+    "repo": "Library",
+    "title": "Library",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/Library"
+  },
+  {
+    "repo": "Project_astralforge_helix",
+    "title": "Project AstralForge\u2013Helix \ud83c\udf0c\u26a1",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/Project_astralforge_helix"
+  },
+  {
+    "repo": "adk-algorithmic-trading-analyst-team",
+    "title": "Algorithmic Trading & Consensus Risk Committee",
+    "description": "Consensus trading committee where quantitative valuation agents and risk compliance officers debate portfolio position sizing....",
+    "category": "FinTech & Quant",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-algorithmic-trading-analyst-team"
+  },
+  {
+    "repo": "adk-ambient-proactive-calendar-sentinel",
+    "title": "Ambient Proactive Executive Calendar Sentinel",
+    "description": "Ambient background autonomous agent scanning upcoming calendars, detecting cross-timezone flight conflicts, and proactively proposing meeting moves....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-ambient-proactive-calendar-sentinel"
+  },
+  {
+    "repo": "adk-automated-agent-eval-harness",
+    "title": "Automated ADK Eval Harness & User Simulation",
+    "description": "Comprehensive evaluation framework executing synthetic user-simulation (`user-sim`), multi-turn trajectory benchmarking, and LLM-as-a-judge scoring....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-automated-agent-eval-harness"
+  },
+  {
+    "repo": "adk-autonomous-devops-orchestrator",
+    "title": "Autonomous DevOps & SRE Incident Orchestrator",
+    "description": "Autonomous SRE incident management team coordinating concurrent telemetry checks, distributed trace root cause analysis, and automated safe canary rollback dispatch....",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-autonomous-devops-orchestrator"
+  },
+  {
+    "repo": "adk-bigquery-lakehouse-analytics-copilot",
+    "title": "BigQuery Lakehouse Analytics & SQL Copilot",
+    "description": "Native BigQuery Agent Analytics connector generating partitioned SQL, visualizing execution plans, and reducing scanned query bytes....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-bigquery-lakehouse-analytics-copilot"
+  },
+  {
+    "repo": "adk-cloudrun-production-microservice",
+    "title": "Containerized ADK Server & OpenTelemetry Microservice",
+    "description": "Production-hardened FastAPI / gRPC ADK server containerized for Cloud Run with OpenTelemetry tracing exported to Google Cloud Trace and Prometheus....",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-cloudrun-production-microservice"
+  },
+  {
+    "repo": "adk-creative-marketing-studio",
+    "title": "Imagen 3 Marketing Studio & Visual Co-Pilot",
+    "description": "Imagen 3 generative image studio with multi-turn iterative prompt engineering, inpainting mask generation, and brand guidelines verification....",
+    "category": "Multimodal & Voice",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-creative-marketing-studio"
+  },
+  {
+    "repo": "adk-deep-research-autonomous-synthesizer",
+    "title": "Autonomous Deep Research & Graph Synthesizer",
+    "description": "Autonomous deep research workflow implementing recursive sub-query generation, cyclic citation validation, and comprehensive whitepaper synthesis....",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-deep-research-autonomous-synthesizer"
+  },
+  {
+    "repo": "adk-enterprise-knowledge-graph-retriever",
+    "title": "Enterprise Knowledge Graph & Context Compaction",
+    "description": "Context caching and compaction agent utilizing Google Cloud Spanner and Vertex Vector Search for sub-second semantic retrieval across enterprise wikis....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-enterprise-knowledge-graph-retriever"
+  },
+  {
+    "repo": "adk-enterprise-security-soc-copilot",
+    "title": "Enterprise Security SOC Copilot & Threat Triage",
+    "description": "Hierarchical SOC triage copilot mapping security events to MITRE ATT&CK techniques, correlating threat intel, and executing host isolation....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-enterprise-security-soc-copilot"
+  },
+  {
+    "repo": "adk-event-driven-logistics-dispatcher",
+    "title": "Event-Driven IoT Telemetry Logistics Dispatcher",
+    "description": "Google Cloud Pub/Sub and Eventarc streaming agent ingesting real-time refrigerated truck IoT telemetry and dispatching emergency depot maintenance....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-event-driven-logistics-dispatcher"
+  },
+  {
+    "repo": "adk-financial-earnings-call-live-interpreter",
+    "title": "Financial Earnings Call Live Stream Interpreter",
+    "description": "Streaming audio ingest agent listening to corporate quarterly earnings calls, tracking real-time executive sentiment volatility, and dispatching alerts....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-financial-earnings-call-live-interpreter"
+  },
+  {
+    "repo": "adk-google-search-grounded-factchecker",
+    "title": "Google Search Grounded Fact-Checking Sentinel",
+    "description": "Agent utilizing native Google Search Grounding to evaluate viral social claims, calculate dynamic attribution scores, and generate cited verdicts....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-google-search-grounded-factchecker"
+  },
+  {
+    "repo": "adk-guardrailed-banking-transaction-gateway",
+    "title": "Guardrailed Banking Gateway & Cisco AI Defense",
+    "description": "High-security banking gateway integrating ATR Guardrails and Cisco AI Defense to prevent prompt injection, redact PII, and verify wire signatures....",
+    "category": "FinTech & Quant",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-guardrailed-banking-transaction-gateway"
+  },
+  {
+    "repo": "adk-healthcare-clinical-trial-matcher",
+    "title": "Healthcare Clinical Trial Eligibility Matcher",
+    "description": "Iterative patient cohort screening system screening anonymized EHR against inclusion/exclusion criteria using ADK LoopAgent....",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-healthcare-clinical-trial-matcher"
+  },
+  {
+    "repo": "adk-hr-talent-acquisition-pipeline",
+    "title": "HR Talent Acquisition & Assessment Pipeline Graph",
+    "description": "Stateful candidate journey graph coordinating asynchronous resume screening, automated coding assessment generation, and culture interview scoring....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-hr-talent-acquisition-pipeline"
+  },
+  {
+    "repo": "adk-hybrid-model-router-cost-optimizer",
+    "title": "Hybrid Model Routing Gateway & Cost Optimizer",
+    "description": "Dynamic model routing gateway analyzing task complexity, token length, and latency SLAs to dynamically route queries across Gemini 2.0 Flash, Pro, and local Gemma....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-hybrid-model-router-cost-optimizer"
+  },
+  {
+    "repo": "adk-industrial-schematic-cad-parser",
+    "title": "Industrial CAD Blueprint & Schematic Parser",
+    "description": "Multimodal technical document parser extracting engineering symbols, netlist connectivity, and Bill of Materials (BOM) from CAD schematics....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-industrial-schematic-cad-parser"
+  },
+  {
+    "repo": "adk-interactive-ai-podcast-host",
+    "title": "Interactive Multi-Persona Synthetic Podcast Host",
+    "description": "Multi-persona AI podcast host generating natural dialogue turns, injecting humor and intellectual counterpoints, and synthesizing speech via TTS....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-interactive-ai-podcast-host"
+  },
+  {
+    "repo": "adk-legal-contract-negotiation-graph",
+    "title": "Legal Contract Negotiation & Redline State Graph",
+    "description": "Graph-based contract review workflow implementing redline clause extraction, risk assessment, and conditional routing to General Counsel....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-legal-contract-negotiation-graph"
+  },
+  {
+    "repo": "adk-live-bilingual-flight-concierge",
+    "title": "Gemini Live Bilingual Flight Concierge",
+    "description": "Real-time bidirectional voice agent leveraging Gemini Live API over WebSockets for conversational flight rebooking and live baggage tracking....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-live-bilingual-flight-concierge"
+  },
+  {
+    "repo": "adk-long-running-executive-biographer",
+    "title": "Persistent Executive Biographer & Session Rewind",
+    "description": "Multi-session biographical research agent supporting state rewinding, narrative chronology revision, and Firestore session persistence....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-long-running-executive-biographer"
+  },
+  {
+    "repo": "adk-mcp-cloud-infrastructure-manager",
+    "title": "MCP Cloud Infrastructure & Terraform Manager",
+    "description": "Custom ADK MCP server integration providing Terraform HCL plan generation, drift detection, and strict human confirmation approval barriers....",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-mcp-cloud-infrastructure-manager"
+  },
+  {
+    "repo": "adk-mcp-enterprise-erp-bridge",
+    "title": "MCP Enterprise ERP & CRM Integration Bridge",
+    "description": "High-throughput MCP bridge unifying SAP S/4HANA material management and Salesforce CRM customer telemetry with schema reflection....",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-mcp-enterprise-erp-bridge"
+  },
+  {
+    "repo": "adk-mcp-gitops-release-agent",
+    "title": "MCP GitOps Continuous Release Orchestrator",
+    "description": "ADK MCP agent integrating GitHub, GitLab, and Jira MCP servers for automated semantic release notes, PR tagging, and changelog verification....",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-mcp-gitops-release-agent"
+  },
+  {
+    "repo": "adk-mcp-polyglot-database-studio",
+    "title": "MCP Polyglot Database Studio & NL-to-SQL",
+    "description": "ADK MCP client connecting to Postgres, ClickHouse, and Mongo MCP servers for federated enterprise natural-language to SQL/aggregation querying....",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-mcp-polyglot-database-studio"
+  },
+  {
+    "repo": "adk-mcp-sandboxed-data-analyst",
+    "title": "MCP Sandboxed Python Data Analyst",
+    "description": "Secure MCP data analyst executing statistical Python code in isolated micro-VM sandboxes, producing charts, and returning analytical summaries....",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-mcp-sandboxed-data-analyst"
+  },
+  {
+    "repo": "adk-monorepo-codebase-refactoring-agent",
+    "title": "2M Token Monorepo Codebase Refactoring Agent",
+    "description": "Leveraging Gemini 2.0 2M token context window for comprehensive cross-file AST symbol mapping, breaking change analysis, and automated migration....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-monorepo-codebase-refactoring-agent"
+  },
+  {
+    "repo": "adk-multimodal-medical-imaging-assistant",
+    "title": "Multimodal Medical DICOM Imaging QA Assistant",
+    "description": "Medical visual reasoning assistant analyzing DICOM and chest radiographs with spatial bounding-box grounding and structured radiology reporting....",
+    "category": "Multimodal & Voice",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-multimodal-medical-imaging-assistant"
+  },
+  {
+    "repo": "adk-omnichannel-customer-support-director",
+    "title": "Omnichannel Support Director & Intent Handoff",
+    "description": "Omnichannel routing agent with dynamic intent classification, conversational state handoffs, and human-in-the-loop escalation....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-omnichannel-customer-support-director"
+  },
+  {
+    "repo": "adk-persistent-personal-financial-advisor",
+    "title": "Persistent Financial Advisor & Goal Drift Sentinel",
+    "description": "Long-term episodic memory wealth advisor tracking savings goal drift, tax-loss harvesting windows, and life event adaptations over quarters....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-persistent-personal-financial-advisor"
+  },
+  {
+    "repo": "adk-regulatory-compliance-audit-engine",
+    "title": "10,000-Page SEC & Basel Compliance Audit Engine",
+    "description": "Ultra long-context needle-in-a-haystack compliance auditor scanning 10,000-page bank filings for off-balance-sheet discrepancies and covenant breaches....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-regulatory-compliance-audit-engine"
+  },
+  {
+    "repo": "adk-retail-shelf-inventory-auditor",
+    "title": "Retail Shelf Visual Auditor & Planogram Matcher",
+    "description": "Computer vision retail auditor identifying out-of-stock SKUs, measuring planogram compliance percentages, and generating restocking tickets....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-retail-shelf-inventory-auditor"
+  },
+  {
+    "repo": "adk-slack-incident-commander",
+    "title": "Slack War Room Incident Commander Agent",
+    "description": "Two-way Slack connector agent managing production incident channels, rendering interactive Block Kit status modals, and logging war room actions....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-slack-incident-commander"
+  },
+  {
+    "repo": "adk-software-architecture-rfc-reviewer",
+    "title": "Software Architecture RFC Review & Consensus Graph",
+    "description": "Multi-stage architecture RFC reviewer evaluating compliance with microservice patterns, zero-trust security, API idempotency, and consensus voting loops....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-software-architecture-rfc-reviewer"
+  },
+  {
+    "repo": "adk-stripe-fintech-billing-agent",
+    "title": "Stripe Fintech Billing & Dispute Resolution Agent",
+    "description": "Stripe connector agent with webhook cryptographic signature verification, automated dispute evidence packaging, and subscription churn retention....",
+    "category": "FinTech & Quant",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-stripe-fintech-billing-agent"
+  },
+  {
+    "repo": "adk-supply-chain-resilience-graph",
+    "title": "Supply Chain Dynamic Disruption DAG",
+    "description": "Dynamic DAG workflow orchestrating maritime port disruption response, recalculating freight demurrage, and optimizing alternate rail routing....",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-supply-chain-resilience-graph"
+  },
+  {
+    "repo": "adk-video-surveillance-threat-detector",
+    "title": "Temporal Video Surveillance & Anomaly Detector",
+    "description": "Temporal video stream analyzer performing 1-fps frame subsampling, temporal anomaly timestamping, and generating security incident highlight logs....",
+    "category": "Multimodal & Voice",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-video-surveillance-threat-detector"
+  },
+  {
+    "repo": "adk-voice-assisted-surgical-room-pilot",
+    "title": "Voice-Assisted Surgical Room Hands-Free Pilot",
+    "description": "Sterile hands-free voice agent supporting surgical teams with verbal checklist verifications, patient vital telemetry queries, and zero touch UI....",
+    "category": "Multimodal & Voice",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-voice-assisted-surgical-room-pilot"
+  },
+  {
+    "repo": "adk-voice-paramedic-field-scribe",
+    "title": "Voice Paramedic Field Scribe & SOAP Generator",
+    "description": "Hands-free emergency medical scribe converting live ambulance voice chatter into structured SOAP clinical incident records with voice barge-in handling....",
+    "category": "Multimodal & Voice",
+    "github_url": "https://github.com/DamilolaAdegunwa/adk-voice-paramedic-field-scribe"
+  },
+  {
+    "repo": "ai-agent-economy-research",
+    "title": "The AI Agent Economy: Research Mission (2026\u20132030)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/ai-agent-economy-research"
+  },
+  {
+    "repo": "ai-coo-business-operating-system",
+    "title": "AI COO \u2014 Business Operating Intelligence System",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/ai-coo-business-operating-system"
+  },
+  {
+    "repo": "ai-research-assistant",
+    "title": "AI Research Assistant (Local RAG Assistant)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/ai-research-assistant"
+  },
+  {
+    "repo": "ai-research-universe",
+    "title": "\ud83c\udf0c THE 200 RESEARCH MISSIONS: AN AUTONOMOUS INVESTIGATION UNIVERSE",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/ai-research-universe"
+  },
+  {
+    "repo": "ai-super-user-api",
+    "title": "Super User API",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/ai-super-user-api"
+  },
+  {
+    "repo": "architecture-review",
+    "title": "Software Architecture Review Package: ArrayApp (IdeaApp)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/architecture-review"
+  },
+  {
+    "repo": "artefacts",
+    "title": "Google ADK Master Production Curriculum & Artifacts Repository",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/artefacts"
+  },
+  {
+    "repo": "browser-automation-lab",
+    "title": "browser-automation-lab",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/browser-automation-lab"
+  },
+  {
+    "repo": "codeintel",
+    "title": "\ud83d\udd0e CodeIntel \u2014 Repository Intelligence Engine",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/codeintel"
+  },
+  {
+    "repo": "document-intelligence",
+    "title": "Document, Contract, Procurement & Policy Intelligence Department",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/document-intelligence"
+  },
+  {
+    "repo": "engineering-operations-ai-employee",
+    "title": "Engineering Operations AI Employee",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/engineering-operations-ai-employee"
+  },
+  {
+    "repo": "intel-agency",
+    "title": "Build Your Own Intelligence Agency: Platform & Blueprint",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/intel-agency"
+  },
+  {
+    "repo": "mcp-opportunity-radar",
+    "title": "MCP Opportunity Radar \u2014 AI Opportunity Intelligence System",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Cloud & Infrastructure",
+    "github_url": "https://github.com/DamilolaAdegunwa/mcp-opportunity-radar"
+  },
+  {
+    "repo": "my-travel-research",
+    "title": "My Travel & Relocation Research \ud83c\udf0d\u2708\ufe0f",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/my-travel-research"
+  },
+  {
+    "repo": "my_roughwork",
+    "title": "my_roughwork",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/my_roughwork"
+  },
+  {
+    "repo": "naira_wallet_application",
+    "title": "Naira Wallet Application (`naira_wallet_application`)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "FinTech & Quant",
+    "github_url": "https://github.com/DamilolaAdegunwa/naira_wallet_application"
+  },
+  {
+    "repo": "nexus-retail-bi",
+    "title": "Nexus Retail Group \u2014 Enterprise Business Intelligence Environment",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/nexus-retail-bi"
+  },
+  {
+    "repo": "personal-command-center",
+    "title": "\ud83d\udef0\ufe0f Personal Command Center (Personal OS)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/personal-command-center"
+  },
+  {
+    "repo": "project-hyperion",
+    "title": "Project Hyperion: Distributed Database Engine From First Principles",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project-hyperion"
+  },
+  {
+    "repo": "project_aetherion",
+    "title": "Project Aetherion: Autonomous Planetary-Scale Cyber-Defense and Digital Immune System",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_aetherion"
+  },
+  {
+    "repo": "project_astralforge",
+    "title": "Project AstralForge (Build your own Distributed Database)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Deep Research & Science",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_astralforge"
+  },
+  {
+    "repo": "project_atlas",
+    "title": "\ud83e\ude90 Project Atlas: A Distributed Object Storage Platform",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_atlas"
+  },
+  {
+    "repo": "project_chimera",
+    "title": "Project Chimera \u26a1",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_chimera"
+  },
+  {
+    "repo": "project_elysium",
+    "title": "Project Elysium: Building the Digital Hospital of the Future",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_elysium"
+  },
+  {
+    "repo": "project_helios",
+    "title": "Project Helios (A Distributed Cloud Data Analytics Engine)",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_helios"
+  },
+  {
+    "repo": "project_nebula",
+    "title": "Project Nebula",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_nebula"
+  },
+  {
+    "repo": "project_olympus",
+    "title": "Project Olympus \u26a1",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/project_olympus"
+  },
+  {
+    "repo": "room-rent-app",
+    "title": "RoomStay - Room Rental & Management App",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/room-rent-app"
+  },
+  {
+    "repo": "sample_repo",
+    "title": "sample_repo",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/sample_repo"
+  },
+  {
+    "repo": "senior_engineer_Interview_questions",
+    "title": "10,000 Senior Engineer Interview Questions",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/senior_engineer_Interview_questions"
+  },
+  {
+    "repo": "virtual-consulting-firm",
+    "title": "Virtual Management Consulting Firm: AI-Era Enterprise Strategy & Deliverable Pack",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/virtual-consulting-firm"
+  },
+  {
+    "repo": "weather_mobile_app",
+    "title": "Aether - Atmospheric Glass Weather Forecast App \ud83c\udf26\ufe0f",
+    "description": "Autonomous agent system & production architecture.",
+    "category": "Agentic Systems",
+    "github_url": "https://github.com/DamilolaAdegunwa/weather_mobile_app"
+  }
+]

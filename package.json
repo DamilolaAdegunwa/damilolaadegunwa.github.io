@@ -1,0 +1,9 @@
+{
+  "name": "oluwadamilola-portfolio-and-ai-vault",
+  "version": "1.0.0",
+  "description": "Portfolio of Oluwadamilola Adegunwa: 78+ Production AI Repositories and 1,015+ Curated AI Tools Directory.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
