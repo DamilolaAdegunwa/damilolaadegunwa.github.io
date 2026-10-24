@@ -1,0 +1,13 @@
+{
+  "id": "2378",
+  "title": "Project Title: Here's a simple example on openai audio.",
+  "slug": "project-title-heres-a-simple-example-on-openai-audio",
+  "date": "2025-06-05 17:15:33",
+  "categories": [
+    "openai_audio_projects"
+  ],
+  "reading_time": 1,
+  "word_count": 187,
+  "excerpt": "import numpy as np from pydub import AudioSegment from pydub.playback import play from pydub.effects import reverb # Sound source location (example) sound_location = {\"x\": 0, \"y\": 1, \"z\": 0} # Calculate distance between...",
+  "content": "<pre class=\"wp-block-syntaxhighlighter-code\">import numpy as np\nfrom pydub import AudioSegment\nfrom pydub.playback import play\nfrom pydub.effects import reverb\n\n# Sound source location (example)\nsound_location = {\"x\": 0, \"y\": 1, \"z\": 0}\n\n\n# Calculate distance between listener and sound source\ndef calculate_distance_to_sound(position, sound_location):\n    return np.sqrt((position['x'] - sound_location['x']) ** 2 +\n                   (position['y'] - sound_location['y']) ** 2 +\n                   (position['z'] - sound_location['z']) ** 2)\n\n\n# Modify sound volume based on distance\ndef modify_sound_volume(sound, volume_factor):\n    return sound + (volume_factor * 10 - 10)  # Adjusts volume in dB\n\n\n# Adjust spatial audio based on position and sound source\ndef adjust_spatial_audio(position, sound):\n    distance = calculate_distance_to_sound(position, sound_location)\n    volume = 1 / (distance + 1)  # Simple inverse distance attenuation\n    return modify_sound_volume(sound, volume)\n\n\n# Apply reverb to generated sound\ndef apply_reverb(sound, reverb_properties):\n    return reverb(sound)\n\n\n# Match generated sound to environment with reverb\ndef match_generated_sound_to_environment(generated_sound, reverb_properties):\n    modified_sound = apply_reverb(generated_sound, reverb_properties)\n    return modified_sound\n\n\n# Example usage\nif __name__ == \"__main__\":\n    # Load an audio file for testing\n    sound = AudioSegment.from_file(\"example.wav\")\n\n    # Adjust for spatial audio\n    position = {\"x\": 2, \"y\": 0, \"z\": 0}  # Listener's position\n    spatial_sound = adjust_spatial_audio(position, sound)\n\n    # Apply reverb\n    reverb_properties = {\"intensity\": 0.7}  # Example property\n    modified_sound = match_generated_sound_to_environment(spatial_sound, reverb_properties)\n\n    # Play the modified sound\n    play(modified_sound)</pre>"
+}

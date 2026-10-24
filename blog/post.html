@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Article | Oluwadamilola Adegunwa</title>
+  <meta name="description" id="page-desc" content="In-depth technical architecture and engineering blueprint by Oluwadamilola Adegunwa.">
+  <meta name="author" content="Oluwadamilola Adegunwa">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- HubSpot Tracking Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/149622523.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+            },
+            dark: {
+              950: '#07090e',
+              900: '#0b0f17',
+              850: '#111726',
+              800: '#172033',
+              700: '#1e293b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #07090e;
+      color: #e2e8f0;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .glass-nav {
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    /* Typography Styling for Article Body */
+    .prose-dark {
+      font-size: 1.0625rem;
+      line-height: 1.85;
+      color: #cbd5e1;
+    }
+    .prose-dark p {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+    .prose-dark h1, .prose-dark h2, .prose-dark h3, .prose-dark h4 {
+      color: #f8fafc;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.3;
+      margin-top: 2.2em;
+      margin-bottom: 0.8em;
+    }
+    .prose-dark h2 {
+      font-size: 1.625rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.4em;
+    }
+    .prose-dark h3 {
+      font-size: 1.35rem;
+    }
+    .prose-dark ul, .prose-dark ol {
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+      padding-left: 1.75em;
+    }
+    .prose-dark ul {
+      list-style-type: disc;
+    }
+    .prose-dark ol {
+      list-style-type: decimal;
+    }
+    .prose-dark li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    .prose-dark strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .prose-dark em {
+      color: #94a3b8;
+    }
+    .prose-dark a {
+      color: #22d3ee;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: color 0.15s;
+    }
+    .prose-dark a:hover {
+      color: #67e8f9;
+    }
+    .prose-dark blockquote {
+      border-left: 4px solid #06b6d4;
+      padding-left: 1.25em;
+      margin: 1.75em 0;
+      color: #94a3b8;
+      font-style: italic;
+      background: rgba(6, 182, 212, 0.04);
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .prose-dark code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875em;
+      background: #172033;
+      color: #38bdf8;
+      padding: 0.2em 0.4em;
+      border-radius: 0.35rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .prose-dark pre {
+      background: #0f1523;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.25em;
+      overflow-x: auto;
+      margin: 1.75em 0;
+    }
+    .prose-dark pre code {
+      background: transparent;
+      padding: 0;
+      border: none;
+      color: #e2e8f0;
+      font-size: 0.9em;
+    }
+    .prose-dark figure {
+      margin: 2em 0;
+      text-align: center;
+    }
+    .prose-dark img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: inline-block;
+    }
+    .prose-dark figcaption {
+      margin-top: 0.5em;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <a href="./" class="inline-flex items-center space-x-1.5 text-xs font-semibold text-zinc-400 hover:text-brand-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>All 730 Articles</span>
+        </a>
+        <span class="text-zinc-700">/</span>
+        <a href="../" class="text-xs text-zinc-400 hover:text-white hidden sm:inline">Portfolio</a>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <button id="btn-copy-link" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 text-xs border border-zinc-700 transition-colors">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span id="copy-label">Copy Link</span>
+        </button>
+        <a id="btn-share-linkedin" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-lg bg-dark-850 hover:bg-blue-600/20 text-zinc-300 hover:text-blue-400 border border-zinc-700 transition-colors" title="Share on LinkedIn">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a id="btn-share-twitter" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-lg bg-dark-850 hover:bg-sky-600/20 text-zinc-300 hover:text-sky-400 border border-zinc-700 transition-colors" title="Share on X">
+          <i data-lucide="twitter" class="w-4 h-4"></i>
+        </a>
+        <a href="https://calendly.com/damee1993/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold text-xs tracking-wide transition-all shadow-sm shadow-brand-500/20">
+          <span>Schedule Call</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Content Area -->
+  <main class="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+    <!-- Loading State -->
+    <div id="loading-state" class="space-y-6 animate-pulse">
+      <div class="h-4 bg-zinc-800 rounded w-1/4"></div>
+      <div class="h-10 bg-zinc-800 rounded w-4/5"></div>
+      <div class="h-4 bg-zinc-800 rounded w-1/3"></div>
+      <div class="h-64 bg-zinc-800/50 rounded-2xl w-full mt-8"></div>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-state" class="hidden py-20 text-center">
+      <i data-lucide="alert-circle" class="w-12 h-12 text-red-400 mx-auto mb-3"></i>
+      <h2 class="text-xl font-bold text-white">Article Not Found</h2>
+      <p class="text-sm text-zinc-400 mt-2">The requested article could not be located or has moved.</p>
+      <a href="./" class="mt-5 inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Return to Blog Archive</span>
+      </a>
+    </div>
+
+    <!-- Article Container -->
+    <article id="article-wrapper" class="hidden">
+      <!-- Article Header -->
+      <header class="pb-8 border-b border-zinc-800/80">
+        <!-- Categories -->
+        <div id="post-categories" class="flex flex-wrap gap-2 mb-4">
+          <!-- Rendered by JS -->
+        </div>
+
+        <h1 id="post-title" class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
+          <!-- Rendered by JS -->
+        </h1>
+
+        <!-- Metadata Bar -->
+        <div class="mt-6 flex flex-wrap items-center gap-4 text-xs text-zinc-400">
+          <div class="flex items-center space-x-2.5">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white font-bold text-xs">
+              OA
+            </div>
+            <div>
+              <div class="font-bold text-white">Oluwadamilola Adegunwa</div>
+              <div class="text-[11px] text-zinc-500">Principal Systems Architect</div>
+            </div>
+          </div>
+
+          <span class="text-zinc-700 hidden sm:inline">•</span>
+
+          <div class="flex items-center space-x-1.5 font-mono">
+            <i data-lucide="calendar" class="w-3.5 h-3.5 text-zinc-400"></i>
+            <span id="post-date">--</span>
+          </div>
+
+          <span class="text-zinc-700 hidden sm:inline">•</span>
+
+          <div class="flex items-center space-x-1.5 font-mono">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-zinc-400"></i>
+            <span id="post-readtime">-- min read</span>
+          </div>
+
+          <span class="text-zinc-700 hidden sm:inline">•</span>
+
+          <div class="flex items-center space-x-1.5 font-mono">
+            <i data-lucide="file-text" class="w-3.5 h-3.5 text-zinc-400"></i>
+            <span id="post-wordcount">-- words</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Post Body -->
+      <div id="post-content" class="prose-dark pt-8">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Author Bio Box -->
+      <div class="mt-16 p-6 sm:p-8 rounded-2xl bg-dark-900 border border-zinc-800/80 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center text-white font-black text-xl shrink-0 shadow-lg shadow-brand-500/20">
+          OA
+        </div>
+        <div class="flex-1 text-center sm:text-left">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h3 class="font-bold text-white text-base">Oluwadamilola Adegunwa</h3>
+              <p class="text-xs text-brand-400 font-medium">Principal .NET & Autonomous AI Systems Architect</p>
+            </div>
+            <a href="https://calendly.com/damee1993/30min" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition-colors shrink-0">
+              Book Architecture Advisory
+            </a>
+          </div>
+          <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
+            Specializing in enterprise-scale autonomous AI agent swarms, distributed .NET/C# microservices, quantitative market sentinel architectures, and data engineering pipelines. Open to high-stakes consulting and engineering leadership.
+          </p>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <section class="mt-16 pt-10 border-t border-zinc-800/80">
+        <h3 class="text-lg font-bold text-white mb-6 flex items-center space-x-2">
+          <i data-lucide="sparkles" class="w-4 h-4 text-brand-400"></i>
+          <span>Related Engineering Insights</span>
+        </h3>
+        <div id="related-posts" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-800/80 py-8 bg-dark-950 text-xs text-zinc-500 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Oluwadamilola Adegunwa. Preserved from WordPress and hosted permanently.
+      </div>
+      <div class="flex items-center space-x-6">
+        <a href="./" class="hover:text-zinc-300 transition-colors">Blog Archive</a>
+        <a href="../" class="hover:text-zinc-300 transition-colors">Portfolio</a>
+        <a href="rss.xml" target="_blank" class="hover:text-orange-400 transition-colors">RSS</a>
+        <a href="https://github.com/DamilolaAdegunwa" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function loadArticle() {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+
+      if (!slug) {
+        showError();
+        return;
+      }
+
+      try {
+        const res = await fetch(`posts/${encodeURIComponent(slug)}.json`);
+        if (!res.ok) throw new Error('Article not found');
+        const post = await res.json();
+
+        // Update document title & meta
+        document.title = `${post.title} | Oluwadamilola Adegunwa`;
+        document.getElementById('page-title').textContent = `${post.title} | Oluwadamilola Adegunwa`;
+        document.getElementById('page-desc').setAttribute('content', post.excerpt || post.title);
+
+        // Populate header
+        document.getElementById('post-title').textContent = post.title;
+        document.getElementById('post-date').textContent = post.date ? post.date.split(' ')[0] : 'Published';
+        document.getElementById('post-readtime').textContent = `${post.reading_time || 5} min read`;
+        document.getElementById('post-wordcount').textContent = `${(post.word_count || 1000).toLocaleString()} words`;
+
+        // Categories
+        const catBox = document.getElementById('post-categories');
+        catBox.innerHTML = (post.categories || ['AI Architecture']).map(c => `
+          <a href="./?cat=${encodeURIComponent(c)}" class="px-2.5 py-1 rounded-md bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold hover:bg-brand-500/20 transition-colors">
+            ${c}
+          </a>
+        `).join('');
+
+        // Body content
+        document.getElementById('post-content').innerHTML = post.content;
+
+        // Share links
+        const currentUrl = window.location.href;
+        document.getElementById('btn-share-linkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+        document.getElementById('btn-share-twitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(currentUrl)}`;
+        
+        document.getElementById('btn-copy-link').addEventListener('click', () => {
+          navigator.clipboard.writeText(currentUrl).then(() => {
+            const label = document.getElementById('copy-label');
+            label.textContent = 'Copied!';
+            setTimeout(() => { label.textContent = 'Copy Link'; }, 2000);
+          });
+        });
+
+        // Hide loading, show article
+        document.getElementById('loading-state').classList.add('hidden');
+        document.getElementById('article-wrapper').classList.remove('hidden');
+
+        lucide.createIcons();
+
+        // Load related articles
+        loadRelatedArticles(post);
+      } catch (err) {
+        console.error(err);
+        showError();
+      }
+    }
+
+    async function loadRelatedArticles(currentPost) {
+      try {
+        const res = await fetch('posts_index.json');
+        if (!res.ok) return;
+        const all = await res.json();
+        
+        const topCat = (currentPost.categories && currentPost.categories[0]) || '';
+        const related = all
+          .filter(p => p.slug !== currentPost.slug && p.categories.includes(topCat))
+          .slice(0, 3);
+
+        const target = related.length >= 2 ? related : all.filter(p => p.slug !== currentPost.slug).slice(0, 3);
+
+        const container = document.getElementById('related-posts');
+        container.innerHTML = target.map(p => `
+          <a href="post.html?slug=${p.slug}" class="p-5 rounded-xl bg-dark-900 border border-zinc-800 hover:border-brand-500/40 transition-all flex flex-col justify-between group">
+            <div>
+              <span class="text-[11px] text-brand-400 font-semibold uppercase tracking-wider">${p.categories[0] || 'Engineering'}</span>
+              <h4 class="text-sm font-bold text-white group-hover:text-brand-300 mt-2 line-clamp-2">${p.title}</h4>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-500">
+              <span>${p.reading_time} min read</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-zinc-400 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all"></i>
+            </div>
+          </a>
+        `).join('');
+
+        lucide.createIcons();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function showError() {
+      document.getElementById('loading-state').classList.add('hidden');
+      document.getElementById('article-wrapper').classList.add('hidden');
+      document.getElementById('error-state').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    window.addEventListener('DOMContentLoaded', loadArticle);
+  </script>
+</body>
+</html>

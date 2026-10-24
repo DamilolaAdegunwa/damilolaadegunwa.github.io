@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering & AI Architecture Blog | Oluwadamilola Adegunwa</title>
+  <meta name="description" content="730 in-depth articles on Autonomous AI Agents, Machine Learning, Cloud Microservices, and Enterprise Automation by Oluwadamilola Adegunwa.">
+  <meta name="author" content="Oluwadamilola Adegunwa">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Engineering & AI Architecture Blog | Oluwadamilola Adegunwa">
+  <meta property="og:description" content="730 in-depth articles on Autonomous AI Agents, Machine Learning, Cloud Architecture, and Enterprise Automation.">
+  <meta property="og:url" content="https://damilolaadegunwa.github.io/blog/">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="Oluwadamilola Adegunwa Blog RSS" href="rss.xml">
+
+  <!-- HubSpot Tracking Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/149622523.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              900: '#164e63',
+            },
+            dark: {
+              950: '#07090e',
+              900: '#0b0f17',
+              850: '#111726',
+              800: '#172033',
+              700: '#1e293b',
+              600: '#334155',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #07090e;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .glass-nav {
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .article-card {
+      background: #0f1523;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .article-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.15);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0b0f17;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../" class="flex items-center space-x-3 group">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+            OA
+          </div>
+          <div>
+            <div class="font-bold text-sm tracking-tight text-white group-hover:text-brand-400 transition-colors">Oluwadamilola Adegunwa</div>
+            <div class="text-[11px] text-zinc-400 flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Principal .NET & AI Systems Architect</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="../" class="text-zinc-300 hover:text-white transition-colors">Portfolio Overview</a>
+        <a href="../#repositories" class="text-zinc-300 hover:text-white transition-colors">Repositories (78)</a>
+        <a href="../#ai-tools" class="text-zinc-300 hover:text-white transition-colors">AI Tools (1,015)</a>
+        <a href="./" class="text-brand-400 font-semibold border-b-2 border-brand-400 pb-0.5">Blog (730 Posts)</a>
+        <a href="rss.xml" target="_blank" class="text-zinc-400 hover:text-orange-400 transition-colors flex items-center space-x-1">
+          <i data-lucide="rss" class="w-3.5 h-3.5"></i>
+          <span>RSS</span>
+        </a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <a href="https://calendly.com/damee1993/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-slate-950 font-semibold text-xs tracking-wide transition-all shadow-sm shadow-brand-500/30 hover:shadow-brand-400/40">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Schedule Advisory</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="relative pt-12 pb-8 border-b border-zinc-800/80 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-950/20 via-transparent to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+            <span>Engineering & AI Architecture Journal</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+            The Knowledge Vault: <span class="bg-gradient-to-r from-brand-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">730 Articles</span>
+          </h1>
+          <p class="mt-3 text-base text-zinc-400 max-w-2xl leading-relaxed">
+            In-depth engineering blueprints, production AI agent swarms, cloud workflows, machine learning models, and quantitative systems. Fully independent, open, and permanently archived.
+          </p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="flex items-center gap-3 shrink-0">
+          <div class="px-4 py-2.5 rounded-xl bg-dark-900 border border-zinc-800/80 text-center">
+            <div id="stat-total" class="text-2xl font-black text-brand-400 font-mono">730</div>
+            <div class="text-[11px] text-zinc-400 uppercase tracking-wider font-semibold">Published</div>
+          </div>
+          <div class="px-4 py-2.5 rounded-xl bg-dark-900 border border-zinc-800/80 text-center">
+            <div class="text-2xl font-black text-indigo-400 font-mono">100%</div>
+            <div class="text-[11px] text-zinc-400 uppercase tracking-wider font-semibold">Open Access</div>
+          </div>
+          <div class="px-4 py-2.5 rounded-xl bg-dark-900 border border-zinc-800/80 text-center">
+            <div class="text-2xl font-black text-emerald-400 font-mono">24/7</div>
+            <div class="text-[11px] text-zinc-400 uppercase tracking-wider font-semibold">Self-Hosted</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Controls -->
+  <section class="py-6 border-b border-zinc-800/60 bg-dark-900/60 sticky top-16 z-40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+        <!-- Search Input -->
+        <div class="relative flex-1">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400"></i>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search across all 730 articles (title, topic, tags, concepts)... Press '/' to focus"
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-dark-850 border border-zinc-700/70 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all font-sans"
+          />
+          <button id="clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white text-xs bg-zinc-800 px-1.5 py-0.5 rounded">
+            Clear
+          </button>
+        </div>
+
+        <!-- Sort Select -->
+        <div class="flex items-center space-x-2 shrink-0">
+          <label for="sort-select" class="text-xs text-zinc-400 font-medium">Sort:</label>
+          <select id="sort-select" class="bg-dark-850 border border-zinc-700/70 text-zinc-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-brand-500">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="longest">Longest Reads</option>
+            <option value="shortest">Quick Reads</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center space-x-2 overflow-x-auto pb-1 custom-scrollbar text-xs" id="category-pills">
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold whitespace-nowrap transition-all" data-cat="all">
+          All (730)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="Project Idea">
+          Project Ideas (617)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="Programming">
+          Programming (151)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="ai">
+          AI & Agents (98)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="openai_audio_projects">
+          Audio AI (95)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="machine-learning-project">
+          Machine Learning (90)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="python">
+          Python (88)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="keras-projects">
+          Keras & Deep Learning (51)
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="automation">
+          Automation & Workflows
+        </button>
+        <button class="cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all" data-cat="digital-marketing">
+          Growth & Digital Marketing
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Grid Section -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+    <!-- Active Result Count & Status -->
+    <div class="flex items-center justify-between mb-6">
+      <div id="result-meta" class="text-xs text-zinc-400 font-mono">
+        Showing <span id="showing-range" class="text-white font-semibold">1-12</span> of <span id="total-count" class="text-white font-semibold">730</span> articles
+      </div>
+      <div id="active-filter-badge" class="hidden text-xs px-2.5 py-1 rounded bg-zinc-800 text-zinc-300">
+        Filtered by: <span id="active-cat-name" class="font-semibold text-brand-400">All</span>
+      </div>
+    </div>
+
+    <!-- Article Grid -->
+    <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Loading Skeleton -->
+      <div class="p-6 rounded-2xl article-card animate-pulse space-y-4">
+        <div class="h-4 bg-zinc-800 rounded w-1/3"></div>
+        <div class="h-6 bg-zinc-800 rounded w-4/5"></div>
+        <div class="h-16 bg-zinc-800 rounded w-full"></div>
+      </div>
+      <div class="p-6 rounded-2xl article-card animate-pulse space-y-4">
+        <div class="h-4 bg-zinc-800 rounded w-1/3"></div>
+        <div class="h-6 bg-zinc-800 rounded w-4/5"></div>
+        <div class="h-16 bg-zinc-800 rounded w-full"></div>
+      </div>
+      <div class="p-6 rounded-2xl article-card animate-pulse space-y-4">
+        <div class="h-4 bg-zinc-800 rounded w-1/3"></div>
+        <div class="h-6 bg-zinc-800 rounded w-4/5"></div>
+        <div class="h-16 bg-zinc-800 rounded w-full"></div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden py-16 text-center">
+      <i data-lucide="search-x" class="w-12 h-12 text-zinc-600 mx-auto mb-3"></i>
+      <h3 class="text-lg font-bold text-white">No articles matched your search</h3>
+      <p class="text-xs text-zinc-400 mt-1">Try adjusting keywords or selecting another category.</p>
+      <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-xl bg-brand-500 text-slate-950 text-xs font-bold hover:bg-brand-400 transition-colors">
+        Reset All Filters
+      </button>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="mt-12 pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2" id="pagination-buttons">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="flex items-center space-x-2 text-xs text-zinc-400">
+        <span>Go to page:</span>
+        <input 
+          type="number" 
+          id="jump-page" 
+          min="1" 
+          max="61" 
+          class="w-14 px-2 py-1.5 rounded-lg bg-dark-850 border border-zinc-700 text-center text-white focus:outline-none focus:border-brand-500 font-mono"
+        />
+        <button id="btn-jump" class="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-medium transition-colors">
+          Go
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Newsletter & Advisory CTA -->
+  <section class="py-12 border-t border-zinc-800/80 bg-dark-900/50 mt-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
+        <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+        <span>Advisory & Architecture Consulting</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        Need Enterprise AI or Distributed Architecture?
+      </h2>
+      <p class="mt-2 text-sm text-zinc-400 max-w-xl mx-auto leading-relaxed">
+        I partner with venture-backed startups and enterprises to architect autonomous agent swarms, .NET high-throughput systems, and real-time data pipelines.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a href="https://calendly.com/damee1993/30min" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold text-xs tracking-wide transition-all shadow-md shadow-brand-500/20">
+          Book 30-Min Architecture Discovery
+        </a>
+        <a href="../#repositories" class="px-5 py-2.5 rounded-xl bg-dark-800 hover:bg-dark-700 text-white font-semibold text-xs border border-zinc-700 transition-colors">
+          Explore 78 Open Repositories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-800/80 py-8 bg-dark-950 text-xs text-zinc-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Oluwadamilola Adegunwa. All 730 articles preserved and self-hosted permanently.
+      </div>
+      <div class="flex items-center space-x-6">
+        <a href="../" class="hover:text-zinc-300 transition-colors">Home</a>
+        <a href="../#ai-tools" class="hover:text-zinc-300 transition-colors">1,015 AI Tools</a>
+        <a href="rss.xml" target="_blank" class="hover:text-orange-400 transition-colors">RSS Feed</a>
+        <a href="https://github.com/DamilolaAdegunwa" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/damilola-adegunwa" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    let allPosts = [];
+    let filteredPosts = [];
+    let currentPage = 1;
+    const pageSize = 12;
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let currentSort = 'newest';
+
+    async function initBlog() {
+      try {
+        const res = await fetch('posts_index.json');
+        if (!res.ok) throw new Error('Could not load blog index');
+        allPosts = await res.json();
+        filteredPosts = [...allPosts];
+        
+        setupEventListeners();
+        render();
+        lucide.createIcons();
+      } catch (err) {
+        console.error(err);
+        document.getElementById('articles-grid').innerHTML = `
+          <div class="col-span-full py-12 text-center text-red-400 text-sm">
+            Failed to load articles index. Please reload.
+          </div>
+        `;
+      }
+    }
+
+    function setupEventListeners() {
+      // Search
+      const searchInput = document.getElementById('search-input');
+      const clearBtn = document.getElementById('clear-search');
+      
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.trim().toLowerCase();
+        currentPage = 1;
+        clearBtn.classList.toggle('hidden', searchQuery.length === 0);
+        applyFilters();
+      });
+
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearBtn.classList.add('hidden');
+        currentPage = 1;
+        applyFilters();
+      });
+
+      // Keyboard shortcut '/'
+      window.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+          e.preventDefault();
+          searchInput.focus();
+        }
+      });
+
+      // Sort
+      document.getElementById('sort-select').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        applyFilters();
+      });
+
+      // Category Pills
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.cat-pill').forEach(b => {
+            b.className = 'cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all';
+          });
+          btn.className = 'cat-pill px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold whitespace-nowrap transition-all';
+          activeCategory = btn.getAttribute('data-cat');
+          currentPage = 1;
+          applyFilters();
+        });
+      });
+
+      // Jump to page
+      document.getElementById('btn-jump').addEventListener('click', () => {
+        const pageNum = parseInt(document.getElementById('jump-page').value);
+        const maxPages = Math.ceil(filteredPosts.length / pageSize) || 1;
+        if (pageNum >= 1 && pageNum <= maxPages) {
+          currentPage = pageNum;
+          render();
+          window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
+      });
+    }
+
+    function applyFilters() {
+      filteredPosts = allPosts.filter(p => {
+        // Category filter
+        if (activeCategory !== 'all') {
+          const hasCat = p.categories && p.categories.some(c => c.toLowerCase() === activeCategory.toLowerCase());
+          if (!hasCat) return false;
+        }
+
+        // Search filter
+        if (searchQuery) {
+          const inTitle = p.title.toLowerCase().includes(searchQuery);
+          const inExcerpt = p.excerpt.toLowerCase().includes(searchQuery);
+          const inCats = p.categories && p.categories.some(c => c.toLowerCase().includes(searchQuery));
+          if (!inTitle && !inExcerpt && !inCats) return false;
+        }
+
+        return true;
+      });
+
+      // Sort
+      if (currentSort === 'newest') {
+        filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+      } else if (currentSort === 'oldest') {
+        filteredPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+      } else if (currentSort === 'longest') {
+        filteredPosts.sort((a, b) => b.reading_time - a.reading_time);
+      } else if (currentSort === 'shortest') {
+        filteredPosts.sort((a, b) => a.reading_time - b.reading_time);
+      }
+
+      render();
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const d = new Date(dateStr);
+      if (isNaN(d.getTime())) return dateStr.split(' ')[0] || '';
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    function render() {
+      const total = filteredPosts.length;
+      document.getElementById('total-count').textContent = total;
+      
+      const maxPages = Math.ceil(total / pageSize) || 1;
+      if (currentPage > maxPages) currentPage = maxPages;
+
+      const start = (currentPage - 1) * pageSize;
+      const end = Math.min(start + pageSize, total);
+      
+      document.getElementById('showing-range').textContent = total === 0 ? '0' : `${start + 1}-${end}`;
+      document.getElementById('jump-page').max = maxPages;
+
+      const grid = document.getElementById('articles-grid');
+      const empty = document.getElementById('empty-state');
+
+      if (total === 0) {
+        grid.innerHTML = '';
+        empty.classList.remove('hidden');
+        document.getElementById('pagination-buttons').innerHTML = '';
+        return;
+      }
+
+      empty.classList.add('hidden');
+      const pageItems = filteredPosts.slice(start, end);
+
+      grid.innerHTML = pageItems.map(p => {
+        const topCat = (p.categories && p.categories[0]) || 'AI Architecture';
+        const formattedDate = formatDate(p.date);
+
+        return `
+          <article class="p-6 rounded-2xl article-card flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between text-xs text-zinc-400 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-brand-500/10 border border-brand-500/20 text-brand-400 font-semibold truncate max-w-[170px]">
+                  ${topCat}
+                </span>
+                <span class="flex items-center space-x-1 text-zinc-400 shrink-0">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  <span>${p.reading_time} min read</span>
+                </span>
+              </div>
+
+              <h2 class="text-base sm:text-lg font-bold text-white group-hover:text-brand-400 transition-colors line-clamp-2 leading-snug">
+                <a href="post.html?slug=${p.slug}">
+                  ${p.title}
+                </a>
+              </h2>
+
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 line-clamp-3 leading-relaxed">
+                ${p.excerpt}
+              </p>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+              <span class="text-xs text-zinc-400 font-mono">
+                ${formattedDate}
+              </span>
+
+              <a href="post.html?slug=${p.slug}" class="inline-flex items-center space-x-1 text-xs font-bold text-brand-400 group-hover:text-brand-300 group-hover:translate-x-1 transition-all">
+                <span>Read Full Article</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      renderPagination(maxPages);
+      lucide.createIcons();
+    }
+
+    function renderPagination(maxPages) {
+      const container = document.getElementById('pagination-buttons');
+      if (maxPages <= 1) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+      
+      // Prev button
+      html += `
+        <button 
+          onclick="goToPage(${currentPage - 1})" 
+          ${currentPage === 1 ? 'disabled class="px-3 py-1.5 rounded-lg bg-zinc-900 text-zinc-600 border border-zinc-800 text-xs cursor-not-allowed"' : 'class="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 text-xs transition-colors"'}
+        >
+          Previous
+        </button>
+      `;
+
+      // Page numbers (smart range around currentPage)
+      const range = [];
+      const delta = 2;
+      for (let i = Math.max(2, currentPage - delta); i <= Math.min(maxPages - 1, currentPage + delta); i++) {
+        range.push(i);
+      }
+
+      // First page
+      html += `
+        <button 
+          onclick="goToPage(1)" 
+          class="w-8 h-8 rounded-lg text-xs font-semibold ${currentPage === 1 ? 'bg-brand-500 text-slate-950 font-bold' : 'bg-dark-850 hover:bg-zinc-800 text-zinc-300 border border-zinc-700 transition-colors'}"
+        >
+          1
+        </button>
+      `;
+
+      if (currentPage - delta > 2) {
+        html += `<span class="text-zinc-600 text-xs px-1">...</span>`;
+      }
+
+      range.forEach(p => {
+        html += `
+          <button 
+            onclick="goToPage(${p})" 
+            class="w-8 h-8 rounded-lg text-xs font-semibold ${currentPage === p ? 'bg-brand-500 text-slate-950 font-bold' : 'bg-dark-850 hover:bg-zinc-800 text-zinc-300 border border-zinc-700 transition-colors'}"
+          >
+            ${p}
+          </button>
+        `;
+      });
+
+      if (currentPage + delta < maxPages - 1) {
+        html += `<span class="text-zinc-600 text-xs px-1">...</span>`;
+      }
+
+      // Last page
+      if (maxPages > 1) {
+        html += `
+          <button 
+            onclick="goToPage(${maxPages})" 
+            class="w-8 h-8 rounded-lg text-xs font-semibold ${currentPage === maxPages ? 'bg-brand-500 text-slate-950 font-bold' : 'bg-dark-850 hover:bg-zinc-800 text-zinc-300 border border-zinc-700 transition-colors'}"
+          >
+            ${maxPages}
+          </button>
+        `;
+      }
+
+      // Next button
+      html += `
+        <button 
+          onclick="goToPage(${currentPage + 1})" 
+          ${currentPage === maxPages ? 'disabled class="px-3 py-1.5 rounded-lg bg-zinc-900 text-zinc-600 border border-zinc-800 text-xs cursor-not-allowed"' : 'class="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 text-xs transition-colors"'}
+        >
+          Next
+        </button>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    function goToPage(page) {
+      const maxPages = Math.ceil(filteredPosts.length / pageSize) || 1;
+      if (page >= 1 && page <= maxPages) {
+        currentPage = page;
+        render();
+        window.scrollTo({ top: 350, behavior: 'smooth' });
+      }
+    }
+
+    function resetFilters() {
+      searchQuery = '';
+      document.getElementById('search-input').value = '';
+      document.getElementById('clear-search').classList.add('hidden');
+      activeCategory = 'all';
+      document.querySelectorAll('.cat-pill').forEach(b => {
+        b.className = b.getAttribute('data-cat') === 'all' 
+          ? 'cat-pill px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold whitespace-nowrap transition-all'
+          : 'cat-pill px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-zinc-800 text-zinc-300 font-medium border border-zinc-700/60 whitespace-nowrap transition-all';
+      });
+      currentPage = 1;
+      applyFilters();
+    }
+
+    window.addEventListener('DOMContentLoaded', initBlog);
+  </script>
+</body>
+</html>
