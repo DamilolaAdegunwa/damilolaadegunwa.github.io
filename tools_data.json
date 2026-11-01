@@ -11295,5 +11295,16 @@
     "domain": "",
     "description": "logo, banners, voice over",
     "category": "AI Image Generation, 3D, Design & Upscaling"
+  },
+  {
+    "num": 1026,
+    "name": "agent-qa",
+    "primary_url": "https://vostride.com",
+    "all_urls": [
+      "https://vostride.com"
+    ],
+    "domain": "vostride.com",
+    "description": "vostride's natural-language QA agent for web, Android and iOS, with memidex persistent memory and validated self-improvement. Free CLI; model and infrastructure costs are separate.",
+    "category": "AI Coding, App Builders, Low-Code & Developer Tools"
   }
 ]
